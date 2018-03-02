@@ -8,14 +8,57 @@
   ></script>
   <script>
       $(function(){
-          /*(code goes here)*/
+        
+        $('button').click(function(){
+          
+          var college = $('#name').val();
+          var color = $('#color').val();
+          var textColor =$('#textColor').val();
+          var undergrad = $('#undergrad').val();
+          var acceptance = $('#acceptance').val();
+          var sat = $('#SAT').val();
+          var email=$('#email').val();
+          var tuitionInState = $('#tuition').val();
+          var OutOfStateTuition =$('#tuition2').val();
+          var InternationalTuition = $('#internatTuition').val();
+          var imagesrc = $('#image').val();
+          var card= "Hello and welcome to " + college + " here is a little overview of out school! To be considered you need to have a " + sat + " or above on your SAT. Our campus has a total of "
+                    + undergrad + " undergraduates and our acceptance rate averages at about a " + acceptance + ".If you are an Instate Residence Tuition is "+ tuitionInState +" Out of state:" +OutOfStateTuition+" and international:"+ InternationalTuition +". I hope this information helped! If you have any other questions feel free to email us at " 
+                   + email + "."
+                   
+          $('p').html(card).css('color',textColor);
+          $('div').css('background-color', color);
+          $('h1').html(college).css('color',color)
+        
+        });
           
       });
   </script>
  
 
   </head>
-  <body>
-  
+  <body>  
+    
+
+    College Name:<input id = "name"><br>
+    Color of School:<input id ="color"><br>
+    Second Color of School(Optional):<input id = "textColor"><br>
+    Number of Undergrads:<input id = "undergrad"><br>
+    Acceptance Rate:<input id = " acceptance"><br>
+    Tuition In-State:<input id="tuition"><br>
+    Tuition Out-of-State:<input id="tuition2"><br>
+    Tuition International:<input id="internatTuition"><br>
+    SAT score needed:<input id="SAT"><br>
+    School Email: <input id ="email"><br>
+    Image link :<input id ='image'><br>
+    
+    <button>GENERATE COLLEGE INFO CARD!!</button>
+     <h1></h1>
+    <div>
+       
+      <p></p>
+      
+    </div>
+  <img src= imagesrc style="width:100px;height:100px;">
   </body>
 </html>
